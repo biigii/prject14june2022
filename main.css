@@ -1,0 +1,13 @@
+body {
+  height: 100vh;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  display: grid;
+  /* justify-content: center;
+  align-content: center; */
+  /* justify-items: center;
+  align-items: center; */
+  /* place-content: center; */
+  place-items: center;
+}
