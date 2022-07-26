@@ -1,13 +1,105 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css';
+
 body {
-  height: 100vh;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+  margin: 0;
+}
+
+section {
   display: grid;
-  /* justify-content: center;
-  align-content: center; */
-  /* justify-items: center;
-  align-items: center; */
-  /* place-content: center; */
-  place-items: center;
+  height: 100vh;
+  gap: 2px;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px
+}
+
+aside h4 {
+  text-align: center;
+}
+
+aside figure {
+ display: flex;
+ gap: 20px;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 400px 400px;
+  /* grid-template-rows: 1fr 1fr; */
+  justify-content: center;
+  align-content: center;
+}
+
+footer {
+  padding: 20px;
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer nav {
+  /* display: flex;
+  flex-direction: column;
+  gap: 5px */
+  display: grid;
+  gap: 5px;
+}
+
+footer figure {
+  /* display: grid;
+  grid-auto-flow: column; */
+  display: flex;
+  gap: 10px;
+}
+
+@media(max-width: 800px) {
+    section {
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "header"
+      "aside"
+      "main"
+      "footer"
+      ;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1500px) {
+    section {
+      grid-template-rows: 100px 1fr 150px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+      "header header "
+      "aside main"
+      "footer footer";
+    }
+}
+
+@media (min-width: 1500px) {
+  section {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 150px;
+    grid-template-areas:
+      'header header header'
+      'aside main main'
+      'footer footer footer';
+  }
 }
